@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,600,700,800&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title>Home</title>
+		<script>
+			; (function () {
+				function id(v) { return document.getElementById(v); }
+				function loadbar() {
+					var ovrl = id("overlay"),
+						prog = id("progress"),
+						stat = id("progstat"),
+						img = document.images,
+						c = 0,
+						tot = img.length;
+					if (tot == 0) return doneLoading();
+			
+					function imgLoaded() {
+						c += 1;
+						var perc = ((100 / tot * c) << 0);
+						prog.style.width = perc;
+						stat.innerHTML = perc;
+						if (c === tot) return doneLoading();
+					}
+					function doneLoading() {
+						ovrl.style.opacity = 0;
+						setTimeout(function () {
+							ovrl.style.display = "none";
+						}, 1200);
+					}
+					for (var i = 0; i < tot; i++) {
+						var tImg = new Image();
+						tImg.onload = imgLoaded;
+						tImg.onerror = imgLoaded;
+						tImg.src = img[i].src;
+					}
+				}
+				document.addEventListener('DOMContentLoaded', loadbar, false);
+			}());
+		</script>
+	</head>
+	<body class="home-page"><div id="overlay">
+		<div class="loader">
+			<div class="logo-loader" style="padding: 20px 10px; background: #fff;border:3px solid #e5e5e5"><img src="./img/logo.png" style="width: 192px" alt=""></div><div class="progstat-wrapper" style='display: none'>Loading: <span id="progstat"></span>%</div>
+<div id="progress"></div>
+		</div></div>
+		<header class="lmp-header">
+			<div class="main-wrapper">
+				<div class="left-wrapper"></div>
+				<div class="logo-wrapper"><a href="#"><img src="./img/logo.png" alt=""></a></div>
+				<div class="main-list-wrapper">
+					<ul>
+						<li><a href="#">Trang chủ</a></li>
+						<li><a href="#">Về CHÚNG TÔI</a></li>
+						<li><a href="#">DỊCH VỤ</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">SẢN PHẨM TRANG TRÍ</a></li>
+								<li class="menu-item"><a href="#">SẢN PHẨM TRANG TRÍ</a></li>
+								<li class="menu-item"><a href="#">SẢN PHẨM TRANG TRÍ</a></li>
+							</ul>
+						</li>
+						<li><a href="#">SẢN PHẨM TRANG TRÍ</a></li>
+						<li><a href="#">DỰ ÁN THỰC HIỆN</a></li>
+						<li><a href="#">CẨM NANG THIẾT KẾ</a></li>
+						<li><a href="#">TUYỂN DỤNG</a></li>
+						<li><a href="#">LIÊN HỆ</a></li>
+					</ul>
+				</div>
+				<div class="right-wrapper">
+					<div class="searchicon"><em class="mdi mdi-magnify"></em></div>
+					<div class="toggle-mobile-wrapper"><span></span></div>
+				</div>
+			</div>
+			<div class="search-wrapper">
+				<div class="close-button"><em class="lnr lnr-cross"></em></div>
+				<div class="container">
+					<div class="searchbox">
+						<input type="text" placeholder="Search ...">
+						<button type="submit">Search</button>
+					</div>
+				</div>
+			</div>
+			<div class="backdrop-wrapper"></div>
+			<div class="mobile-wrapper">
+				<div class="close-mobile-wrapper"><em class="lnr lnr-cross"></em></div>
+				<div class="mobile-logo-wrapper"><a href="#"><img src="./img/mainlogo.svg" alt=""></a></div>
+			</div>
+		</header>
+		<main>
+			<div class="banner-section"> 
+				<div class="banner-image"> <img src="https://lmpdesign.vn/upload/photo/banner-dichvu-5200.jpg" alt=""></div>
+				<div class="breadcrumb-section">
+					<div class="container"> 
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"> <a href="#">
+									 <em class="fas fa-home"></em></a></li>
+							<li class="breadcrumb-item"> <a href="#">Giới thiệu </a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<section class="lmp-gt-navigation">
+				<div class="mobile-toggle">Danh mục</div>
+				<ul>
+					<li class="active" data-scroll="1"><a href="javascript:void(0)">Thư ngỏ</a></li>
+					<li data-scroll="2"><a href="javascript:void(0)">Giới thiệu LMP</a></li>
+					<li data-scroll="3"><a href="javascript:void(0)">Vì sao chọn LMP</a></li>
+					<li data-scroll="4"><a href="javascript:void(0)">Đội ngũ LMP</a></li>
+				</ul>
+			</section>
+			<section class="gioi-thieu-1 lmp-section">
+				<div class="container">
+					<h1 class="lmp-title center mb-1">Thư ngỏ</h1>
+					<p class="lmp-description">Yêu cái đẹp, luôn tìm tòi và hướng tới cái đẹp là những gì Phương luôn ấp ủ. LMP JSC- Công ty Cổ phần hoạt động trong các lĩnh vực bất động sản, thiết kế và trang trí nội ngoại thất ra đời dựa trên chính tâm tư đó </p>
+					<div class="main-wrapper mt-3 mt-lg-5">
+						<div class="row">
+							<div class="col-lg-6 col-xl-7">
+								<div class="content-wrapper">
+									<h3 class="mb-2">Ý nghĩa của LMP</h3>
+									<p>Không phải ngẫu nhiên mà tôi cùng các cộng sự chọn Logo LMP có cấu trúc hình tháp đứng với chân đế là đường cong tượng trưng cho mặt đất mở rộng cùng với cụm chữ LMP phía dưới tạo thế đứng vững chãi.</p>
+									<p>Không phải ngẫu nhiên mà tôi cùng các cộng sự chọn Logo LMP có cấu trúc hình tháp đứng với chân đế là đường cong tượng trưng cho mặt đất mở rộng cùng với cụm chữ LMP phía dưới tạo thế đứng vững chãi.</p>
+									<p>Không phải ngẫu nhiên mà tôi cùng các cộng sự chọn Logo LMP có cấu trúc hình tháp đứng với chân đế là đường cong tượng trưng cho mặt đất mở rộng cùng với cụm chữ LMP phía dưới tạo thế đứng vững chãi.</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-xl-5">
+								<div class="image-wrapper"><img src="./img/gioi-thieu/1.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="gioi-thieu-2 lmp-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-xl-7">
+							<div class="content-wrapper">
+								<h2 class="lmp-title mb-2">Giới thiệu LMP</h2>
+								<h3 class="mb-3">Là công ty Cổ phần hoạt động trong các lĩnh vực bất động sản, thiết kế và trang trí nội ngoại thất.</h3>
+								<p>Đối với LMP việc thiết kế một công trình nội thất bao gồm văn phòng, nhà hàng, khách sạn hay nhà ở không đơn giản chỉ là việc liên quan đến phần cấu trúc của công trình cũng như việc bố trí, sắp đặt hợp lý và tiện dụng các trang thiết bị nội thất. Mà quan trọng hơn cả chính là phần không gian, linh hồn của một thiết kế, và bạn chỉ có thể cảm nhận nó khi đứng ngay trong chính không gian mà bạn đang sống và làm việc. </p>
+								<p>Đối với LMP việc thiết kế một công trình nội thất bao gồm văn phòng, nhà hàng, khách sạn hay nhà ở không đơn giản chỉ là việc liên quan đến phần cấu trúc của công trình cũng như việc bố trí, sắp đặt hợp lý và tiện dụng các trang thiết bị nội thất. Mà quan trọng hơn cả chính là phần không gian, linh hồn của một thiết kế, và bạn chỉ có thể cảm nhận nó khi đứng ngay trong chính không gian mà bạn đang sống và làm việc. </p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-xl-5">
+							<div class="image-wrapper"><img src="./img/gioi-thieu/2.png" alt=""><a href="#">
+									<div class="play"><img src="./img/play.png" alt=""></div></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gioi-thieu-3 lmp-section">
+				<h2 class="lmp-title center">Vì sao chọn LMP</h2>
+				<div class="main-wrapper mt-2 mt-lg-5">
+					<div class="row no-gutters">
+						<div class="col-lg-4 item">
+							<figure>
+								<div class="image"><img src="./img/gioi-thieu/3.png" alt=""></div>
+								<figcaption>
+									<div class="ic"><img src="./img/gioi-thieu/ic-1.png" alt=""></div>
+									<p>Tiết kiệm thời gian<br>cho khách hàng và đối tác.</p>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-4 item">
+							<figure>
+								<div class="image"><img src="./img/gioi-thieu/3.png" alt=""></div>
+								<figcaption>
+									<div class="ic"><img src="./img/gioi-thieu/ic-2.png" alt=""></div>
+									<p>Tiết kiệm thời gian<br>cho khách hàng và đối tác.</p>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-lg-4 item">
+							<figure>
+								<div class="image"><img src="./img/gioi-thieu/3.png" alt=""></div>
+								<figcaption>
+									<div class="ic"><img src="./img/gioi-thieu/ic-3.png" alt=""></div>
+									<p>Tiết kiệm thời gian<br>cho khách hàng và đối tác.</p>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="gioi-thieu-4">
+				<div class="container">
+					<h2 class="lmp-title center">Đội ngũ LMP</h2>
+					<div class="swiper-container slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="image"><img src="./img/product2.png" alt=""></div>
+								<div class="caption">
+									<p>abc</p><span>bcd</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="image"><img src="./img/product3.png" alt=""></div>
+								<div class="caption">
+									<p>abc</p><span>bcd</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="image"><img src="./img/product4.png" alt=""></div>
+								<div class="caption">
+									<p>abc</p><span>bcd</span>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-navigation">
+							<div class="swiper-next"><em class="lnr lnr-chevron-right"></em></div>
+							<div class="swiper-prev"><em class="lnr lnr-chevron-left"></em></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="backToTop"><img src="./img/backtotop.svg" style="width: 25px" alt="">
+				<p>TOP</p>
+			</div>
+		</main>
+		<footer class="lmp-footer">
+			<div class="top-wrapper lmp-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="content-wrapper">
+								<h2 class="lmp-title">Liên hệ</h2>
+								<h3>Anh nông dân BĐS</h3>
+								<p><a href="#">Zalo: 0963503281</a><br><a href="#">Sđt: 0964.790.796</a><br><a href="#">Youtube: Anh nông dân BĐS</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-wrapper">
+				<div class="main-wrapper">
+					<div class="left-wrapper">
+						<div class="copyright-wrapper"><p>COPYRIGHT © 2021 Anh nông dân BĐS. </p></div>
+					</div>
+					<div class="right-wrapper">
+						<div class="social-wrapper">
+							<ul>
+								<li><a href="#"><em class="fab fa-facebook-f"></em></a></li>
+								<li><a href="#"><em class="fab fa-twitter"></em></a></li>
+								<li><a href="#"><em class="fab fa-youtube"></em></a></li>
+								<li><a href="#"><em class="fab fa-instagram"></em></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script>
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&autoLogAppEvents=1';
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			t._e = [];
+			t.ready = function(f) {
+			t._e.push(f);
+			};
+			return t;
+			}(document, "script", "twitter-wjs"));
+		</script>
+		<script src="./js/core.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>
